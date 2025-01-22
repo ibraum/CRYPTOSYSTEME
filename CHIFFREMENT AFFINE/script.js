@@ -54,20 +54,46 @@ const decode = () => {
     if (dv === '') {
         alert("Entrer un message crypté");
     } else {
-        const encode_array = dv.split('')
+        const decode_array = dv.split('')
         let decode_value = "";
-        encode_array.forEach(value => {
+        decode_array.forEach(value => {
             let index = alphabet.indexOf(value)
+            // console.log(index);
             let number_a = parseInt(a_v)
             let number_b = parseInt(b_v)
-            let index_key =( index - number_b) * number_a
-            console.log(index, number_b, number_a, index_key);
-            while (index_key < 0) {
-                index_key += alphabet.length
+            let index_key = ( index - number_b) * modInverse(number_a, alphabet.length)
+            let mod_index_key = parseInt(index_key) % alphabet.length
+
+            while (mod_index_key < 0) {
+                mod_index_key += alphabet.length
             }
-            const mod_index_key = parseInt(index_key) % alphabet.length
+
+            console.log(mod_index_key);
             decode_value += `${alphabet[mod_index_key]}`
         });
         decode_response[0].value = decode_value
     }
+}
+
+const modInverse = (a, m) => {
+    let m0 = m;
+    let x0 = 0, x1 = 1;
+
+    if (m === 1) return 0;
+
+    while (a > 1) {
+        let q = Math.floor(a / m);
+        let temp = m;
+
+        m = a % m;
+        a = temp;
+
+        temp = x0;
+        x0 = x1 - q * x0;
+        x1 = temp;
+    }
+
+    if (x1 < 0) x1 += m0;
+
+    return x1;
 }
