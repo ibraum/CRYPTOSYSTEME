@@ -201,6 +201,10 @@ button {
 }
 
 @media screen and (max-width: 500px) {
+    body {
+        height: 800px;
+    }
+
     header {
         gap: 20px;
     }
