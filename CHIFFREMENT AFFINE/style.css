@@ -144,6 +144,7 @@ button {
     border: none;
     font-size: 1.2rem;
     box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
 
 .response {
