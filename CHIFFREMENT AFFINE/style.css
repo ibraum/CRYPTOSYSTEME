@@ -1,7 +1,3 @@
-:root {
-
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +64,6 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    /* background-color: red; */
 }
 
 .a, .b {
@@ -94,9 +89,7 @@ header {
 
 .title {
     font-size: 10rem;
-    /* background: linear-gradient(90deg, ); */
     color: white;
-    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.337); */
 }
 
 main {
@@ -119,7 +112,6 @@ main {
 form {
     width: 80%;
     height: 80%;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,4 +163,61 @@ button {
 .response:focus {
     border: none;
     outline: none;
+}
+
+@media screen and (max-width: 1300px) {
+    .title {
+        font-size: 4rem;
+        text-align: center;
+    } 
+
+    .affine_inputs {
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .a, .b {
+        width: 50%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 25px;
+    }
+
+    .encode, .decode {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        gap: 20px;
+    }
+    .title {
+        padding-top: 25px;
+        font-size: 2rem;
+        text-align: center;
+    } 
+
+    .affine_inputs {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .a, .b {
+        width: 50%;
+    }
 }

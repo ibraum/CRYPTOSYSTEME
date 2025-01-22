@@ -34,7 +34,6 @@ const encode = () => {
             let number_a = parseInt(a_v)
             let number_b = parseInt(b_v)
             let index_key =(( index * number_a) + number_b)
-            console.log(index_key);
             const mod_index_key = parseInt(index_key) % alphabet.length
             encode_value += `${alphabet[mod_index_key]}`
         });
@@ -58,7 +57,6 @@ const decode = () => {
         let decode_value = "";
         decode_array.forEach(value => {
             let index = alphabet.indexOf(value)
-            // console.log(index);
             let number_a = parseInt(a_v)
             let number_b = parseInt(b_v)
             let index_key = ( index - number_b) * modInverse(number_a, alphabet.length)
@@ -68,7 +66,6 @@ const decode = () => {
                 mod_index_key += alphabet.length
             }
 
-            console.log(mod_index_key);
             decode_value += `${alphabet[mod_index_key]}`
         });
         decode_response[0].value = decode_value
