@@ -6,6 +6,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    /* outline: 1px solid red; */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -93,8 +94,17 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px;
-
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.45);
+    align-content: center;
+    text-align: center;
+    background-color: #5B58EB;
+    border: 2px solid #5B58EB;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .links {
@@ -110,6 +120,44 @@ body {
     justify-content: center;
     align-items: center;
     list-style: none;
+    gap: 25px;
+}
+
+.links ul li {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.link {
+    width: 100%;
+}
+
+.links ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #BB63FF, #5B58EB);
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    align-content: center;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
 }
 
 .modal {

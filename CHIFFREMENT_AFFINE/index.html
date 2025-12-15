@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="dom.js" defer></script>
+    <title>CHIFFREMENT AFFINE</title>
+</head>
+<body>
+    <div class="menu" onclick="openNav()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="navigation">
+        <div class="nav_container">
+            <div class="close" onclick="closeNav()">
+                <i class="fi fi-sc-cross"></i>
+            </div>
+            <div class="logo">CRYPTOSYSTEM</div>
+            <div class="links">
+                <ul>
+                    <li><a href="" class="link">Code de vigénère</a></li>
+                    <li><a href="">Chiffrement de hill</a></li>
+                    <li><a href="">RSA</a></li>
+                    <li><a href="">Merkle HELLMAN</a></li>
+                    <li><a href="">Cryptosystème de ELGAMAL</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <a href="" class="social"><i class="fi fi-brands-github"></i></a>
+                <a href="" class="social"><i class="fi fi-brands-linkedin"></i></a>
+                <a href="" class="social"><i class="fi fi-brands-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+
+    </div>
+    <header>
+        <div class="title">Chiffrement affine</div>
+        <div class="affine">
+            <div class="label">function</div>
+            <div class="function">
+                <span class="multiplicative">a</span>
+                x +
+                <span class="additive">b</span>
+            </div>
+            <div class="affine_inputs">
+                <div class="a">
+                    <input type="number" class="keys" placeholder="a" min="1" onchange="a(value)">
+                </div>
+                <div class="b">
+                    <input type="number" class="keys" placeholder="b" onchange="b(value)">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="encode">
+            <form action="" onsubmit="event.preventDefault(); encode()">
+                <input type="text" class="text encode_input" placeholder="message clair">
+                <button type="submit">encode</button>
+                <input type="text" class="response encode_response" readonly>
+            </form>
+        </div>
+        <div class="decode">
+            <form action="" onsubmit="event.preventDefault(); decode()">
+                <input type="text" class="text decode_input" placeholder="message chiffré">
+                <button type="submit">decode</button>
+                <input type="text" class="response decode_response" readonly>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
